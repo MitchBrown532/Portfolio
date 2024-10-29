@@ -1,0 +1,4 @@
+Flask==2.3.2                 # Flask web framework
+Flask-Caching==1.11.0        # Caching for Flask routes
+Flask-CORS==3.1.1            # Handling CORS for Flask (cross-origin requests)
+requests==2.31.0             # HTTP requests to the GitHub API
