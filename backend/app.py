@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
-from flask_caching import Cache  # Import the Cache class
 from dotenv import load_dotenv
 from config import Config
 from routes.github import github_bp
+from extensions import cache  # Import cache from extensions.py
 
 # Load environment variables from the .env file
 load_dotenv()
@@ -18,7 +18,7 @@ app.config.from_object(Config)
 CORS(app)
 
 # Initialize Cache
-cache = Cache(app)  # Correctly initialize the cache with the app
+cache.init_app(app)  # Bind cache to the app instance
 
 # Register Blueprints
 app.register_blueprint(github_bp, url_prefix='/api/github')
@@ -30,3 +30,4 @@ def home():
 # Run the Flask app
 if __name__ == '__main__':
     app.run(debug=app.config['DEBUG'])
+
