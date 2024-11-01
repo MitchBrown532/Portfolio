@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
 import SkeletonCard from "../components/SkeletonCard"; // Import skeleton card component
+import "./Pages.css";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
@@ -22,7 +23,7 @@ function Projects() {
   return (
     <div className="projects-page">
       <h2>My GitHub Projects</h2>
-      <div className="projects-grid">
+      <div className="card-grid">
         {loading
           ? Array.from({ length: 6 }).map(
               (
