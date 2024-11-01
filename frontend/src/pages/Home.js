@@ -29,13 +29,14 @@ function Home() {
   return (
     <div>
       <div className="home-page">
-        <h1 className="home-title">Welcome to My Portfolio!</h1>
+        <h1 className="home-title">Welcome to My Website!</h1>
         <p className="home-description">
           Hi, my name is Mitchell. I'm a recent graduate from my studies in
           Computer Science and Philosophy, an amateur full-stack developer, and
           an avid enjoyer of music production. Explore my projects and learn
-          more about me :)
+          more about me.
         </p>
+        <p className="home-description">:)</p>
       </div>
       <div className="card-grid">
         {homeCards.map((card, index) => (
