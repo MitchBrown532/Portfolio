@@ -1,3 +1,9 @@
+/* 
+==================================
+Global styling
+==================================
+*/
+
 /* Responsive grid for cards */
 .card-grid {
   display: grid;
@@ -5,6 +11,12 @@
   gap: 16px; /* Space between grid items */
   padding: 16px; /* Optional padding */
 }
+
+/* 
+==================================
+Home page styling
+==================================
+*/
 
 /* Centering the content */
 .home-page {
@@ -29,4 +41,119 @@
   max-width: 700px; /* Limit width for better readability */
   margin: 0 auto 20px; /* Center the text and add bottom margin */
   line-height: 1.6; /* Improve readability */
+}
+
+/* 
+==================================
+About page styling
+==================================
+*/
+
+.about-page {
+  max-width: 800px; /* Constrain the width for better readability */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add space around the content */
+  color: #333; /* Set a dark text color for readability */
+}
+
+/* Image Styling */
+.about-image {
+  display: block; /* Centers the image if margin is set to auto */
+  width: 150px; /* Adjust size to fit your layout */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 50%; /* Makes the image circular */
+  margin: 0 auto 20px; /* Centers image and adds space below */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+/* Title Styling */
+.about-page h1 {
+  font-size: 2.5em; /* Large font size for prominence */
+  margin-bottom: 20px; /* Space below the title */
+  text-align: center; /* Center the title text */
+  font-weight: bold; /* Make the title stand out */
+  color: #333; /* Dark color for the title */
+}
+
+/* Introduction Section Styling */
+.about-introduction {
+  margin-bottom: 30px; /* Space below the introduction section */
+}
+
+.about-introduction p {
+  font-size: 1.2em; /* Slightly larger font size for readability */
+  color: #666; /* Softer color for contrast with title */
+  line-height: 1.6; /* Increase line spacing for readability */
+}
+
+/* Experience Section Styling */
+.about-experience {
+  margin-bottom: 30px; /* Space below the experience section */
+}
+
+/* Subheading Styling for Section Titles */
+.about-experience h2,
+.about-skills h2,
+.about-interests h2 {
+  font-size: 1.8em; /* Large font size for subheadings */
+  margin-bottom: 15px; /* Space below each subheading */
+  color: #555; /* Softer color than the title for visual hierarchy */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+/* Experience List Styling */
+.about-experience ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  padding-left: 0; /* Remove default padding from the left */
+}
+
+.about-experience li {
+  font-size: 1.1em; /* Slightly larger font for easy reading */
+  margin-bottom: 10px; /* Space below each experience item */
+  color: #333; /* Dark color for text consistency */
+}
+
+/* Skills Section Styling */
+.about-skills {
+  margin-bottom: 30px; /* Space below the skills section */
+}
+
+.about-skills p {
+  font-size: 1.1em; /* Medium font size for skills text */
+  color: #666; /* Softer color to match other text */
+  line-height: 1.5; /* Line height to improve readability */
+}
+
+/* Interests Section Styling */
+.about-interests {
+  margin-bottom: 30px; /* Space below the interests section */
+}
+
+.about-interests p {
+  font-size: 1.1em; /* Consistent font size with other sections */
+  color: #666; /* Softer color for readability */
+  line-height: 1.5; /* Line height for readability */
+}
+
+/* Optional Responsive Styling - adjust for smaller screens */
+@media (max-width: 600px) {
+  .about-page {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .about-page h1 {
+    font-size: 2em; /* Adjust title size for smaller screens */
+  }
+
+  .about-experience h2,
+  .about-skills h2,
+  .about-interests h2 {
+    font-size: 1.5em; /* Adjust subheading size for smaller screens */
+  }
+
+  .about-introduction p,
+  .about-skills p,
+  .about-interests p {
+    font-size: 1em; /* Adjust paragraph font size for smaller screens */
+  }
 }
