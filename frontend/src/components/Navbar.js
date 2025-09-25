@@ -41,6 +41,11 @@ function Navbar() {
                 Skills
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/resume">
+                Resume
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
