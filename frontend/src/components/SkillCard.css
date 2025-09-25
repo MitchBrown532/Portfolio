@@ -5,24 +5,31 @@
   padding: 1.2rem; /* Inner spacing */
   margin: 1rem 0; /* Space between cards */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.2s ease; /* Smooth hover animation */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth hover animation */
+  cursor: pointer; /* Indicate clickability */
+  text-align: center; /* Center title */
 }
 
 .skill-card:hover {
   transform: translateY(-5px); /* Lift effect on hover */
+  background-color: #f9f9f9; /* Subtle hover background */
 }
 
 .skill-card h2 {
   margin-bottom: 0.8rem; /* Space below heading */
-  font-size: 1.2rem; /* Slightly larger heading */
+  font-size: 2rem; /* Much larger heading */
 }
 
-.skill-card ul {
-  list-style: none; /* Remove bullet points */
+.skill-title {
+  font-size: 2rem; /* MUCH bigger logo/title */
+  margin: 0;
+}
+.skill-list {
   padding-left: 0; /* Reset default padding */
+  margin-top: 1rem; /* Space above element */
+  text-align: left; /* Align skills to left inside card */
 }
-
-.skill-card li {
+.skill-list li {
   margin: 0.4rem 0; /* Vertical spacing between skills */
-  font-size: 0.95rem; /* Slightly smaller text */
+  font-size: 1rem; /* Slightly smaller text */
 }

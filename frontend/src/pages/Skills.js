@@ -65,7 +65,7 @@ function Skills() {
       {/* Resume Button */}
       <div className="skills-resume">
         <a
-          href="/assets/resume.pdf"
+          href="/resume"
           target="_blank"
           rel="noopener noreferrer"
           className="resume-button"
