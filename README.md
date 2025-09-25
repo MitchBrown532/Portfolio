@@ -68,24 +68,26 @@ cd your-repo-name
 cd backend
 ```
 
-2. Create and activate a virtual environment:
+2. Create a virtual environment:
 
 ```bash
 python -m venv venv
-source venv/bin/activate    # For Mac/Linux
-venv\Scripts\activate       # For Windows
 ```
 
-3. Install dependencies:
+3. Activate the virtual environment:
+
+```bash
+# For Windows
+venv\Scripts\activate
+
+# For Mac/Linux
+source venv/bin/activate
+```
+
+4. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
-```
-
-4. Run the Flask server:
-
-```bash
-flask run
 ```
 
 ### Frontend Setup (React)
@@ -102,11 +104,19 @@ cd frontend
 npm install
 ```
 
-3. Start the React development server:
+### Launching the Project (Frontend + Backend)
+
+After completing the backend and frontend setup, you can launch the entire project with a single command:
 
 ```bash
-npm start
+cd frontend
+npm run dev
 ```
+
+This will:
+
+- Start the React frontend on localhost:3000
+- Start the Flask backend on localhost:5000
 
 ### Environment Variables
 
