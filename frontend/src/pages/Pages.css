@@ -1,3 +1,4 @@
+/* =========== Styling for Components =========== */
 /* Responsive grid for cards */
 .card-grid {
   display: grid;
@@ -6,12 +7,12 @@
   padding: 16px; /* Optional padding */
 }
 
+/* =========== Styling for Home page =========== */
 /* Centering the content */
 .home-page {
   text-align: center;
   padding: 20px;
 }
-
 /* Title Styling */
 .home-title {
   font-size: 2.5em; /* Large, prominent font size */
@@ -20,7 +21,6 @@
   margin-bottom: 10px; /* Space below the title */
   line-height: 1.2;
 }
-
 /* Description Styling */
 .home-description {
   font-size: 1.2em; /* Larger than normal body text */
@@ -29,4 +29,31 @@
   max-width: 700px; /* Limit width for better readability */
   margin: 0 auto 20px; /* Center the text and add bottom margin */
   line-height: 1.6; /* Improve readability */
+}
+
+/* =========== Styling for About page =========== */
+/* =========== Styling for Projects page =========== */
+/* =========== Styling for Skills page =========== */
+/* =========== Styling for Resume page =========== */
+/* Resume Page Styling*/
+.resume-page {
+  text-align: center; /* Center-align text and elements */
+  max-width: 900px; /* Limit width for better readability */
+  margin: 0 auto; /* Center page content horizontally */
+}
+
+/* Resume Download Button */
+.resume-download {
+  display: inline-block; /* Make button behave like a block while inline */
+  padding: 10px 20px; /* Add spacing inside the button */
+  background-color: #007acc; /* Primary blue background */
+  color: white; /* White text for contrast */
+  border-radius: 6px; /* Slightly rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Emphasize button text */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.resume-download:hover {
+  background-color: #005fa3; /* Darker blue on hover */
 }
