@@ -1,4 +1,4 @@
-/* =========== Styling for Components =========== */
+/* =========================== Styling for Components =========================== */
 /* Responsive grid for cards */
 .card-grid {
   display: grid;
@@ -7,7 +7,7 @@
   padding: 16px; /* Optional padding */
 }
 
-/* =========== Styling for Home page =========== */
+/* =========================== Styling for Home page =========================== */
 /* Centering the content */
 .home-page {
   text-align: center;
@@ -31,10 +31,10 @@
   line-height: 1.6; /* Improve readability */
 }
 
-/* =========== Styling for About page =========== */
-/* =========== Styling for Projects page =========== */
-/* =========== Styling for Skills page =========== */
-/* =========== Styling for Resume page =========== */
+/* =========================== Styling for About page =========================== */
+/* =========================== Styling for Projects page =========================== */
+/* =========================== Styling for Skills page =========================== */
+/* =========================== Styling for Resume page =========================== */
 /* Resume Page Styling*/
 .resume-page {
   text-align: center; /* Center-align text and elements */

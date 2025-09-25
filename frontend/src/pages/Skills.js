@@ -1,4 +1,5 @@
 import React from "react";
+import SkillCard from "../components/SkillCard";
 import "./Pages.css";
 
 function Skills() {
@@ -6,66 +7,72 @@ function Skills() {
     <div className="container skills-page">
       <h1>My Skills</h1>
 
-      {/* Frontend Skills */}
-      <section>
-        <h2>🎨 Frontend</h2>
-        <ul>
-          <li>⚡ JavaScript (ES6+)</li>
-          <li>⚛️ React</li>
-          <li>🖼️ HTML5 / CSS3</li>
-          <li>📐 Bootstrap</li>
-          <li>🎨 UI/UX Fundamentals</li>
-        </ul>
-      </section>
+      <div className="card-grid">
+        <SkillCard
+          title="🎨 Frontend"
+          skills={[
+            "⚡ JavaScript (ES6+)",
+            "⚛️ React",
+            "🖼️ HTML5 / CSS3",
+            "📐 Bootstrap",
+            "🎨 UI/UX Fundamentals",
+          ]}
+        />
 
-      {/* Backend Skills */}
-      <section>
-        <h2>🛠️ Backend</h2>
-        <ul>
-          <li>🐍 Python</li>
-          <li>🌶️ Flask</li>
-          <li>🟢 Node.js (basic)</li>
-          <li>🔗 REST API Development</li>
-          <li>🗄️ SQL / Database Fundamentals</li>
-        </ul>
-      </section>
+        <SkillCard
+          title="🛠️ Backend"
+          skills={[
+            "🐍 Python",
+            "🌶️ Flask",
+            "🟢 Node.js (basic)",
+            "🔗 REST API Development",
+            "🗄️ SQL / Database Fundamentals",
+          ]}
+        />
 
-      {/* AI & Machine Learning */}
-      <section>
-        <h2>🤖 AI & Machine Learning</h2>
-        <ul>
-          <li>🔬 TensorFlow & Keras</li>
-          <li>📊 Data Preprocessing & Feature Engineering</li>
-          <li>
-            📈 Applied Machine Learning (classification, regression, time
-            series)
-          </li>
-          <li>🧠 NLP & Generative AI (familiarity)</li>
-        </ul>
-      </section>
+        <SkillCard
+          title="🤖 AI & Machine Learning"
+          skills={[
+            "🔬 TensorFlow & Keras",
+            "📊 Data Preprocessing & Feature Engineering",
+            "📈 Applied ML (classification, regression, time series)",
+            "🧠 NLP & Generative AI (familiarity)",
+          ]}
+        />
 
-      {/* Tools & Platforms */}
-      <section>
-        <h2>🧰 Tools & Platforms</h2>
-        <ul>
-          <li>🐙 Git & GitHub</li>
-          <li>🐳 Docker</li>
-          <li>☁️ Cloudways (deployment)</li>
-          <li>🚀 Vercel (deployment)</li>
-          <li>📦 NPM & Node Package Management</li>
-        </ul>
-      </section>
+        <SkillCard
+          title="🧰 Tools & Platforms"
+          skills={[
+            "🐙 Git & GitHub",
+            "🐳 Docker",
+            "☁️ Cloudways (deployment)",
+            "🚀 Vercel (deployment)",
+            "📦 NPM & Node Package Management",
+          ]}
+        />
 
-      {/* Additional Skills */}
-      <section>
-        <h2>✨ Additional Skills</h2>
-        <ul>
-          <li>🔧 Debugging & Troubleshooting</li>
-          <li>📈 SEO & Web Performance Optimization</li>
-          <li>📝 Technical Writing & Documentation</li>
-          <li>🤝 Team Collaboration & Agile Familiarity</li>
-        </ul>
-      </section>
+        <SkillCard
+          title="✨ Additional Skills"
+          skills={[
+            "🔧 Debugging & Troubleshooting",
+            "📈 SEO & Web Performance",
+            "📝 Technical Writing",
+            "🤝 Team Collaboration (Agile)",
+          ]}
+        />
+      </div>
+
+      {/* Resume Button */}
+      <div className="skills-resume">
+        <a
+          href="/assets/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="resume-button"
+        >
+          📄 View My Resume
+        </a>
+      </div>
     </div>
   );
 }
