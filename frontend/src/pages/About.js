@@ -15,6 +15,11 @@ function About() {
         <strong>AI and automation</strong>
         to solve real-world problems.
       </p>
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       <p>
         I’ve worked on projects ranging from <em>portfolio websites</em> to
         <em> AI-powered business tools</em>, and I’ve also consulted with
@@ -30,7 +35,11 @@ function About() {
       </p>
 
       <div className="about-links">
+<<<<<<< Updated upstream
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+=======
+        <a href="/resume" target="_blank" rel="noopener noreferrer">
+>>>>>>> Stashed changes
           📄 Resume
         </a>{" "}
         |{" "}
@@ -50,6 +59,10 @@ function About() {
           LinkedIn
         </a>
       </div>
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </div>
   );
 }
