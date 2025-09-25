@@ -5,6 +5,14 @@ function About() {
   return (
     <div className="container about-page">
       <h1>About Me</h1>
+      <div className="about-content">
+        {/* Profile Pic */}
+        <img
+          src="/img/Mitch.jpg"
+          alt="A very handsome portrait of Mitchell Brown, the creator of this website"
+        />
+      </div>
+      {/* Bio */}
       <p>
         Hi, I’m <strong>Mitchell Brown</strong>, a software developer with a
         background in
@@ -28,7 +36,6 @@ function About() {
         actively looking for opportunities where I can contribute to impactful
         software projects and grow alongside experienced developers.
       </p>
-
       <div className="about-links">
         <a href="/resume" target="_blank" rel="noopener noreferrer">
           📄 Resume
