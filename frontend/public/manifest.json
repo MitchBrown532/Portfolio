@@ -1,0 +1,40 @@
+{
+  "short_name": "Portfolio",
+  "name": "Mitchell Brown Portfolio",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/Mitch.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "img/about-me.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/project.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/projects.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/skills.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0d1117",
+  "background_color": "#ffffff"
+}
