@@ -11,11 +11,8 @@ function Skills() {
         <SkillCard
           title="🎨 Frontend"
           skills={[
-            "⚡ JavaScript (ES6+)",
-            "⚛️ React",
-            "🖼️ HTML5 / CSS3",
-            "📐 Bootstrap",
-            "🎨 UI/UX Fundamentals",
+            "⚡ JavaScript / HTML / CSS / JSX",
+            "⚛️ React / Vite",
           ]}
         />
 
@@ -23,41 +20,17 @@ function Skills() {
           title="🛠️ Backend"
           skills={[
             "🐍 Python",
-            "🌶️ Flask",
-            "🟢 Node.js (basic)",
-            "🔗 REST API Development",
-            "🗄️ SQL / Database Fundamentals",
+            "🗄️ SQL",
           ]}
         />
 
         <SkillCard
-          title="🤖 AI & Machine Learning"
+          title="🧰 Tools & DevOps"
           skills={[
-            "🔬 TensorFlow & Keras",
-            "📊 Data Preprocessing & Feature Engineering",
-            "📈 Applied ML (classification, regression, time series)",
-            "🧠 NLP & Generative AI (familiarity)",
-          ]}
-        />
-
-        <SkillCard
-          title="🧰 Tools & Platforms"
-          skills={[
-            "🐙 Git & GitHub",
+            "🐙 Git",
             "🐳 Docker",
-            "☁️ Cloudways (deployment)",
-            "🚀 Vercel (deployment)",
-            "📦 NPM & Node Package Management",
-          ]}
-        />
-
-        <SkillCard
-          title="✨ Additional Skills"
-          skills={[
-            "🔧 Debugging & Troubleshooting",
-            "📈 SEO & Web Performance",
-            "📝 Technical Writing",
-            "🤝 Team Collaboration (Agile)",
+            "🧪 Pytest",
+            "⚙️ GitHub Actions",
           ]}
         />
       </div>

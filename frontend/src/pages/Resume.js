@@ -8,7 +8,7 @@ function Resume() {
 
       {/* Embedded PDF */}
       <iframe
-        src="/assets/resume.pdf"
+        src="/assets/MB_resume.pdf"
         width="100%"
         height="800px"
         style={{ border: "none", marginTop: "1rem" }}
@@ -17,7 +17,7 @@ function Resume() {
 
       {/* Download button */}
       <div style={{ marginTop: "1rem" }}>
-        <a href="/assets/resume.pdf" download className="resume-download">
+        <a href="/assets/MB_Resume.pdf" download className="resume-download">
           ⬇️ Download Resume
         </a>
       </div>

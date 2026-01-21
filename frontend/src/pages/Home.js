@@ -31,10 +31,7 @@ function Home() {
       <div className="home-page">
         <h1 className="home-title">Welcome to My Website!</h1>
         <p className="home-description">
-          Hi, my name is Mitchell. I'm a recent graduate from my studies in
-          Computer Science and Philosophy, an amateur full-stack developer, and
-          an avid enjoyer of music production. Explore my projects and learn
-          more about me.
+          Hi, my name is Mitchell Brown. Educated at Wilfrid Laurier, BSc in Computer Science minor in philosophy, early-career software dev looking to learn and grow and build. I like creating music and developing video games. Explore my projects and learn more about me.
         </p>
         <p className="home-description">:)</p>
       </div>

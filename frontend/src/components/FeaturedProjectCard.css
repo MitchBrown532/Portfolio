@@ -1,0 +1,32 @@
+.featured-project-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 1rem;
+  overflow: hidden;
+  max-width: 400px;
+}
+.featured-project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.featured-project-content {
+  padding: 1rem;
+}
+.featured-project-tech {
+  font-size: 0.95em;
+  color: #555;
+  margin: 0.5em 0;
+}
+.featured-project-links a {
+  margin-right: 1em;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.featured-project-links a:hover {
+  text-decoration: underline;
+}
