@@ -1,3 +1,8 @@
+"""Pytest suite for the backend Flask application.
+
+Includes tests for routes, error handling, CORS, and caching behavior.
+"""
+
 import pytest
 import json
 from ..app import app
@@ -7,8 +12,21 @@ import requests
 @pytest.fixture
 def client():
     app.config['TESTING'] = True
+    from ..extensions import cache
+    # Ensure cache is initialized with app config (uses Config defaults)
+    cache.init_app(app)
+    # Clear cache before each test to avoid cross-test pollution
+    try:
+        cache.clear()
+    except Exception:
+        pass
     with app.test_client() as client:
         yield client
+    # Clear cache after test as well
+    try:
+        cache.clear()
+    except Exception:
+        pass
 
 def test_home_route(client):
     response = client.get('/')
@@ -58,3 +76,28 @@ def test_github_route_no_token(client):
 def test_cors_headers(client):
     response = client.get('/', headers={'Origin': 'http://localhost:3000'})
     assert 'Access-Control-Allow-Origin' in response.headers
+
+
+def test_github_route_caching(client):
+    # Verify that the route result is cached and subsequent requests do not call GitHub again
+    with patch('backend.routes.github.requests.get') as mock_get:
+        mock_response = MagicMock()
+        mock_response.json.return_value = [
+            {"name": "cached-repo", "description": "cached", "html_url": "https://github.com/test/cached", "language": "Python", "created_at": "2023-01-01T00:00:00Z", "private": False}
+        ]
+        mock_response.raise_for_status.return_value = None
+        mock_get.return_value = mock_response
+
+        # First request should call requests.get
+        r1 = client.get('/api/github/projects')
+        assert r1.status_code == 200
+        data1 = r1.get_json()
+        assert data1[0]['name'] == 'cached-repo'
+        assert mock_get.call_count == 1
+
+        # Second request should be served from cache (no new requests.get call)
+        r2 = client.get('/api/github/projects')
+        assert r2.status_code == 200
+        data2 = r2.get_json()
+        assert data2 == data1
+        assert mock_get.call_count == 1

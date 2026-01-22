@@ -16,8 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:all": "npm run test -- --watchAll=false && cd ../backend && pytest",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"npm start\" \"node dev-backend.js\""
+    "dev": "concurrently -n \"backend,frontend\" -c \"blue,green\" \"node dev-backend.js\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
