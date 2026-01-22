@@ -57,3 +57,91 @@
 .resume-download:hover {
   background-color: #005fa3; /* Darker blue on hover */
 }
+
+/* =========================== Contact Page Styles =========================== */
+.contact-page {
+  padding: 24px;
+}
+
+.contact-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  max-width: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #222;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn {
+  background: #007acc;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  width: max-content;
+}
+
+.contact-aside {
+  min-width: 220px;
+  max-width: 280px;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  margin: 12px 0;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+}
+
+.social-links a:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+.social-links img {
+  width: 28px;
+  height: 28px;
+}
+
+.success { color: green; margin-top: 8px; }
+.warning { color: #b45309; margin-top: 8px; }
+
+@media (max-width: 780px) {
+  .contact-layout { flex-direction: column-reverse; align-items:center; }
+  .contact-aside { width:100%; max-width:520px; text-align:center }
+}
