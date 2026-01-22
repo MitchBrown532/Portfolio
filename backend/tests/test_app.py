@@ -1,7 +1,8 @@
 import pytest
 import json
-from app import app
-from unittest.mock import patch
+from ..app import app
+from unittest.mock import patch, MagicMock
+import requests
 
 @pytest.fixture
 def client():
@@ -14,22 +15,21 @@ def test_home_route(client):
     assert response.status_code == 200
     assert b"Hello from the backend!" in response.data
 
-@patch('routes.github.requests.get')
+@patch('backend.routes.github.requests.get')
 def test_github_route_success(mock_get, client):
     # Mock successful GitHub API response
-    mock_response = {
-        "json": lambda: [
-            {
-                "name": "test-repo",
-                "description": "A test repo",
-                "html_url": "https://github.com/test/test-repo",
-                "language": "Python",
-                "created_at": "2023-01-01T00:00:00Z",
-                "private": False
-            }
-        ],
-        "raise_for_status": lambda: None
-    }
+    mock_response = MagicMock()
+    mock_response.json.return_value = [
+        {
+            "name": "test-repo",
+            "description": "A test repo",
+            "html_url": "https://github.com/test/test-repo",
+            "language": "Python",
+            "created_at": "2023-01-01T00:00:00Z",
+            "private": False
+        }
+    ]
+    mock_response.raise_for_status.return_value = None
     mock_get.return_value = mock_response
 
     response = client.get('/api/github/projects')
@@ -39,10 +39,10 @@ def test_github_route_success(mock_get, client):
     assert len(data) == 1
     assert data[0]['name'] == 'test-repo'
 
-@patch('routes.github.requests.get')
+@patch('backend.routes.github.requests.get')
 def test_github_route_api_error(mock_get, client):
     # Mock GitHub API error
-    mock_get.side_effect = Exception("API Error")
+    mock_get.side_effect = requests.exceptions.RequestException("API Error")
 
     response = client.get('/api/github/projects')
     assert response.status_code == 500

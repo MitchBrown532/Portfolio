@@ -1,14 +1,14 @@
 from flask import Blueprint, jsonify
 import requests
-from extensions import cache  # Import cache from extensions.py
-from config import Config
+from ..extensions import cache
+from ..config import Config
 
 # Create a Blueprint for GitHub-related routes
 github_bp = Blueprint('github', __name__)
 
 # GitHub Projects API route with caching
 @github_bp.route('/projects', methods=['GET'])
-@cache.cached()  # Cache this route for the duration defined in config.py
+@cache.cached()  # duration defined in config.py
 def github_projects():
     url = f'https://api.github.com/users/{Config.GITHUB_USERNAME}/repos'
     headers = {'Authorization': f'token {Config.GITHUB_TOKEN}'} if Config.GITHUB_TOKEN else {}

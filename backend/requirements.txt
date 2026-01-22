@@ -5,3 +5,4 @@ cachelib==0.9.0             # Required by Flask-Caching for cache backends
 requests==2.31.0            # HTTP requests to the GitHub API
 python-dotenv==1.0.0        # For loading environment variables from .env files
 pytest==7.4.0               # Testing framework
+Werkzeug==2.3.7             # WSGI utility library, compatible with Flask 2.3.2
