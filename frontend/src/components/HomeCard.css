@@ -1,17 +1,19 @@
 /* HomeCard.css */
 .home-card {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #3a3a3a;
   border-radius: 8px;
   padding: 16px;
   margin: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #2d2d2d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
 }
 
 .home-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 212, 255, 0.2);
+  border-color: #00d4ff;
 }
 
 .home-card-image {
@@ -23,11 +25,11 @@
 
 .home-card-title {
   font-size: 1.25em;
-  color: #333;
+  color: #f0f0f0;
   margin: 0 0 8px;
 }
 
 .home-card-description {
   font-size: 1em;
-  color: #666;
+  color: #c0c0c0;
 }

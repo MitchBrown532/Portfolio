@@ -15,9 +15,9 @@ function Resume() {
       />
 
       {/* Download button */}
-      <div style={{ marginTop: "1rem" }}>
+      <div className="resume-button-wrapper">
         <a href="/assets/MB_Resume.pdf" download className="resume-download">
-          ⬇️ Download Resume
+          Download Resume
         </a>
       </div>
     </div>

@@ -1,14 +1,15 @@
 /* SkeletonCard.css */
 .skeleton-card {
-  border: 1px solid #e0e0e0;
+  border: 1px solid #3a3a3a;
   border-radius: 8px;
   padding: 16px;
   margin: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #2d2d2d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .skeleton {
-  background-color: #e0e0e0;
+  background-color: #3a3a3a;
   border-radius: 4px;
   animation: shimmer 1.5s infinite linear;
 }

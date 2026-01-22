@@ -1,28 +1,33 @@
 /* ===== Skill Card Styling ===== */
 .skill-card {
-  background: #fff; /* White card background */
+  background: #2d2d2d; /* Dark card background */
   border-radius: 8px; /* Rounded corners */
   padding: 1.2rem; /* Inner spacing */
   margin: 1rem 0; /* Space between cards */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth hover animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease; /* Smooth hover animation */
   cursor: pointer; /* Indicate clickability */
   text-align: center; /* Center title */
+  border: 1px solid #3a3a3a;
 }
 
 .skill-card:hover {
   transform: translateY(-5px); /* Lift effect on hover */
-  background-color: #f9f9f9; /* Subtle hover background */
+  background-color: #333; /* Subtle hover background */
+  border-color: #00d4ff;
+  box-shadow: 0 6px 12px rgba(0, 212, 255, 0.2);
 }
 
 .skill-card h2 {
   margin-bottom: 0.8rem; /* Space below heading */
   font-size: 2rem; /* Much larger heading */
+  color: #f0f0f0;
 }
 
 .skill-title {
   font-size: 2rem; /* MUCH bigger logo/title */
   margin: 0;
+  color: #f0f0f0;
 }
 .skill-list {
   padding-left: 0; /* Reset default padding */
@@ -32,4 +37,5 @@
 .skill-list li {
   margin: 0.4rem 0; /* Vertical spacing between skills */
   font-size: 1rem; /* Slightly smaller text */
+  color: #d0d0d0;
 }
