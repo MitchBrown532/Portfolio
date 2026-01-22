@@ -6,6 +6,7 @@ from ..config import Config
 # Create a Blueprint for GitHub-related routes
 github_bp = Blueprint('github', __name__)
 
+
 # GitHub Projects API route with caching
 @github_bp.route('/projects', methods=['GET'])
 @cache.cached()  # duration defined in config.py
