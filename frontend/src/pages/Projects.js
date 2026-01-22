@@ -40,25 +40,50 @@ function Projects() {
   const featuredProjects = [
     {
       title: "Web Scraper for Auction Sites",
-      description: "Automates data collection from multiple auction platforms, normalizes results, and exports to CSV for analysis.",
-      image: "/img/auction-scraper.png", // Add this image to public/img
-      tech: ["Python", "Requests", "BeautifulSoup", "Pandas"],
-      github: "https://github.com/mitchbrown532/auction-scraper",
+      description:
+        "Automates scraping of 3 auction websites based on user queries, extracting lots and all relevant data (bid, closing date, seller, etc.). Runs every 2 hours, stores persistent results, updates records, and tracks changes for time series analysis. Eliminates manual searching, saving hours of work. Designed for easy scaling to more sites/users.",
+      image: "/img/Scraper.png",
+      tech: [
+        "Python",
+        "BeautifulSoup",
+        "Playwright",
+        "Streamlit",
+        "Flask",
+        "PostgreSQL",
+        "Pytest",
+        "Git",
+        "GitHub Actions",
+        "Docker",
+      ],
+      github: null,
       demo: null,
     },
     {
       title: "Text Extraction Data Pipeline (RBC)",
-      description: "Built for RBC: Extracts, cleans, and stores text data from scanned documents using OCR and SQL.",
-      image: "/img/rbc-pipeline.png", // Add this image to public/img
-      tech: ["Python", "OCR", "SQL", "Pandas"],
+      description:
+        "Contract for RBC Bank: Built a pipeline to extract and clean data from large, inconsistently formatted .txt files during a branch acquisition. Delivered ahead of schedule and under budget, steering the team away from unnecessary AI solutions. Focused on robust, testable code and practical automation.",
+      image: "/img/RBC.png",
+      tech: ["Python", "Regex", "Pandas", "Pytest", "Git"],
       github: null,
       demo: null,
     },
     {
       title: "CRUD App",
-      description: "A full-stack CRUD app for managing tasks, with authentication and RESTful API.",
-      image: "/img/crud-app.png", // Add this image to public/img
-      tech: ["React", "Flask", "SQLAlchemy", "Docker"],
+      description:
+        "A full-stack app to practice and demonstrate CRUD operations. Features add, edit, delete, update, pagination, and filtering. Implements RESTful API practices, rigourous frontend & backend testing, CI/CD with GitHub Actions, and Docker. Designed to showcase core skills for entry-level software development.",
+      image: "/img/CRUD.png", 
+      tech: [
+        "React",
+        "Vite",
+        "Flask",
+        "SQLAlchemy",
+        "SQLite",
+        "PostgreSQL",
+        "Docker",
+        "Pytest",
+        "Vitest",
+        "GitHub Actions",
+      ],
       github: "https://github.com/mitchbrown532/crud-app",
       demo: null,
     },

@@ -10,9 +10,9 @@ function FeaturedProjectCard({ title, description, image, tech, github, demo }) 
         <p>{description}</p>
         <div className="featured-project-tech">{tech && tech.join(", ")}</div>
         <div className="featured-project-links">
-          {github && (
+          {github ? (
             <a href={github} target="_blank" rel="noopener noreferrer">GitHub</a>
-          )}
+          ): (<span>Github: N/A (Signed an NDA)</span>)}
           {demo && (
             <a href={demo} target="_blank" rel="noopener noreferrer">Live Demo</a>
           )}
