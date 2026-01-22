@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./SkillCard.css";
 
 function SkillCard({ title, skills }) {
@@ -9,10 +9,8 @@ function SkillCard({ title, skills }) {
       className={`skill-card ${isOpen ? "open" : ""}`}
       onClick={() => setIsOpen(!isOpen)}
     >
-      {/* Title & Logo */}
       <h2 className="skill-title">{title}</h2>
 
-      {/* Expandable Skill List */}
       {isOpen && (
         <ul className="skill-list">
           {skills.map((skill, index) => (

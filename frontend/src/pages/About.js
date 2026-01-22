@@ -1,6 +1,4 @@
-import React from "react";
-import "./Pages.css"; // ensure shared styles apply
-
+import "./Pages.css"; 
 function About() {
   return (
     <div className="container about-page">

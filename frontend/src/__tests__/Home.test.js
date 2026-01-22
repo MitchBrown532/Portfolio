@@ -1,11 +1,16 @@
 import { render, screen } from '@testing-library/react';
+import { act } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import Home from '../pages/Home';
 
-// Helper to render with router
+// Helper to render with router using React.act
 const renderWithRouter = (component) => {
-  return render(<BrowserRouter>{component}</BrowserRouter>);
+  let result;
+  act(() => {
+    result = render(<BrowserRouter>{component}</BrowserRouter>);
+  });
+  return result;
 };
 
 test('renders Home component with title and description', () => {

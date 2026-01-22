@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProjectCard.css";
 
 function ProjectCard({ name, description, html_url, language, created_at }) {

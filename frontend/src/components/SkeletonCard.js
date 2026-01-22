@@ -1,5 +1,4 @@
-import React from "react";
-import "./SkeletonCard.css"; // Skeleton styling
+import "./SkeletonCard.css"; 
 
 function SkeletonCard() {
   return (

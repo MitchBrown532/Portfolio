@@ -3,9 +3,8 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 from .config import Config
 from .routes.github import github_bp
-from .extensions import cache  # Import cache from extensions.py
+from .extensions import cache  
 
-# Load environment variables from the .env file
 load_dotenv()
 
 # Create the Flask app

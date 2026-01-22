@@ -9,6 +9,7 @@ github_bp = Blueprint('github', __name__)
 # GitHub Projects API route with caching
 @github_bp.route('/projects', methods=['GET'])
 @cache.cached()  # duration defined in config.py
+
 def github_projects():
     url = f'https://api.github.com/users/{Config.GITHUB_USERNAME}/repos'
     headers = {'Authorization': f'token {Config.GITHUB_TOKEN}'} if Config.GITHUB_TOKEN else {}
@@ -18,7 +19,6 @@ def github_projects():
         response.raise_for_status()
         repos = response.json()
 
-        # Filter and return relevant repo data
         filtered_repos = [
             {
                 "name": repo['name'],

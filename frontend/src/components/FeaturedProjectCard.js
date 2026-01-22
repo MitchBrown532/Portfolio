@@ -1,4 +1,3 @@
-import React from "react";
 import "./FeaturedProjectCard.css";
 
 function FeaturedProjectCard({ title, description, image, tech, github, demo }) {

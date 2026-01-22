@@ -1,10 +1,4 @@
-"""Pytest suite for the backend Flask application.
-
-Includes tests for routes, error handling, CORS, and caching behavior.
-"""
-
 import pytest
-import json
 from ..app import app
 from unittest.mock import patch, MagicMock
 import requests

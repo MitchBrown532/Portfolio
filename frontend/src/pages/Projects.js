@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
-import SkeletonCard from "../components/SkeletonCard"; // Import skeleton card component
+import SkeletonCard from "../components/SkeletonCard"; 
 import "./Pages.css";
 import FeaturedProjectCard from "../components/FeaturedProjectCard";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true); // New loading state
+  const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -36,7 +36,6 @@ function Projects() {
       });
   }, []);
 
-  // Featured projects data (customize as needed)
   const featuredProjects = [
     {
       title: "Web Scraper for Auction Sites",

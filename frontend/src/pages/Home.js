@@ -1,10 +1,8 @@
-import React from "react";
 import HomeCard from "../components/HomeCard";
 import DontClick from "../components/DontClick";
 import "./Pages.css";
 
 function Home() {
-  // Placeholder data - will need to update
   const homeCards = [
     {
       title: "About",

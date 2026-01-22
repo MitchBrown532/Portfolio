@@ -1,12 +1,11 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./HomeCard.css"; // Import CSS for styling
+import "./HomeCard.css"; 
 
 function HomeCard({ title, image, description, path }) {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   function handleClick() {
-    navigate(path); // Navigate to the specified path
+    navigate(path); 
   }
 
   return (

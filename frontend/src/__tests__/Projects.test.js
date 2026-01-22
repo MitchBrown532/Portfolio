@@ -1,9 +1,22 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { act } from 'react';
 import Projects from '../pages/Projects';
 
 // Mock fetch
 global.fetch = jest.fn();
+
+beforeEach(() => {
+  fetch.mockClear();
+});
+
+// Suppress expected console.error logs from the component during tests
+beforeAll(() => {
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+});
+afterAll(() => {
+  console.error.mockRestore();
+});
 
 test('renders Projects component and fetches data', async () => {
   const mockData = [
@@ -14,7 +27,9 @@ test('renders Projects component and fetches data', async () => {
     json: () => Promise.resolve(mockData)
   });
 
-  render(<Projects />);
+  act(() => {
+    render(<Projects />);
+  });
 
   expect(screen.getByText(/My GitHub Projects/i)).toBeInTheDocument();
 
@@ -26,7 +41,9 @@ test('renders Projects component and fetches data', async () => {
 test('shows error on fetch failure', async () => {
   fetch.mockRejectedValueOnce(new Error('Network error'));
 
-  render(<Projects />);
+  act(() => {
+    render(<Projects />);
+  });
 
   await waitFor(() => {
     expect(screen.getByText(/Failed to load projects/i)).toBeInTheDocument();
